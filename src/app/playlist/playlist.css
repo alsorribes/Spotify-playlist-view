@@ -1,0 +1,7 @@
+/* Asegúrate de que el root component cubra toda la altura */
+:host {
+  display: block;
+  min-height: 120vh;
+  background-color: #000;
+}
+
