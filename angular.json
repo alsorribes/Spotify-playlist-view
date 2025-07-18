@@ -25,6 +25,10 @@
               }
             ],
             "styles": [
+              "node_modules/@ionic/angular/css/core.css",
+              "node_modules/@ionic/angular/css/normalize.css",
+              "node_modules/@ionic/angular/css/structure.css",
+              "node_modules/@ionic/angular/css/typography.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",

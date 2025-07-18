@@ -1,5 +1,19 @@
-<body>
-    <div class="spotify-container">
-        
+<ion-header [translucent]="true">
+    <ion-toolbar class="topbar">
+        <ion-title slot="start" class="logo">Spotify</ion-title>    
+        <ion-searchbar slot="end" class="barra-busqueda" placeholder="¿Qué quieres reproducir?" debounce="300"></ion-searchbar> 
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="spotify-container">
+    <div class="sidebar">
+
     </div>
-</body>
+    <div class="playlist-container">
+
+    </div>
+</ion-content>
+
+<ion-footer class="bottom-player">
+
+</ion-footer>

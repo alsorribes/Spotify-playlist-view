@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Playlist } from "./playlist/playlist";
+import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-root',
-  imports: [Playlist],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: 'app.html',
+  styleUrls: ['app.css'],
+  standalone: true,
+  imports: [IonApp, IonRouterOutlet],
 })
 export class App {
-  protected title = 'spotify-playlist';
+  constructor() {}
 }
