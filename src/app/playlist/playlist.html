@@ -1,12 +1,41 @@
 <ion-header [translucent]="true">
     <ion-toolbar class="topbar">
-        <ion-title slot="start" class="logo">Spotify</ion-title>
-        <ion-buttons  slot="primary">
-            <ion-button fill="clear">
-                <ion-icon name="home" slot="icon-only"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-        <ion-searchbar slot="end" class="barra-busqueda" placeholder="¿Qué quieres reproducir?" debounce="300"></ion-searchbar> 
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-section">
+                <ion-title class="logo">Spotify</ion-title>
+            </div>
+            
+            <!-- Navegación central -->
+            <div class="nav-section">
+                <ion-button class="nav-btn home-btn" fill="clear">
+                    <ion-icon name="home" slot="icon-only"></ion-icon>
+                </ion-button>
+                
+                <div class="search-container">
+                    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <input type="text" class="search-input" placeholder="¿Qué quieres reproducir?">
+                    <ion-icon name="mic-outline" class="mic-icon"></ion-icon>
+                </div>
+            </div>
+            
+            <!-- Sección derecha -->
+            <div class="right-section">
+                <ion-button class="action-btn" fill="clear">
+                    <ion-icon name="download-outline"></ion-icon>
+                    <span>Instalar aplicación</span>
+                </ion-button>
+                
+                <ion-button class="notification-btn" fill="clear">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                </ion-button>
+                
+                <div class="user-menu">
+                    <div class="user-avatar">A</div>
+                    <ion-icon name="chevron-down-outline" class="dropdown-icon"></ion-icon>
+                </div>
+            </div>
+        </div>
     </ion-toolbar>
 </ion-header>
 
