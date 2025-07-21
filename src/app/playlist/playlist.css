@@ -38,7 +38,7 @@ ion-content {
 }
 
 .sidebar {
-  flex: 0 0 250px;
+  flex: 0 0 150px;
   background-color: #181818;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -47,6 +47,58 @@ ion-content {
   overflow-x: hidden;
   padding: 10px;
 }
+
+/* 1) TRACK siempre transparente en WebKit */
+.sidebar::-webkit-scrollbar-track,
+.playlist-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-corner,
+.playlist-container::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* 2) THUMB transparente hasta el hover */
+.sidebar::-webkit-scrollbar-thumb,
+.playlist-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* 3) Al hover reaparece sólo el thumb */
+.sidebar:hover::-webkit-scrollbar-thumb,
+.playlist-container:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+/* 4) Ancho cero por defecto, 6px al hover */
+.sidebar::-webkit-scrollbar,
+.playlist-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.sidebar:hover::-webkit-scrollbar,
+.playlist-container:hover::-webkit-scrollbar {
+  width: 6px;
+  height: auto;
+}
+
+/* 5) Firefox: scrollbar-color para track y thumb */
+.sidebar,
+.playlist-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+}
+.sidebar:hover,
+.playlist-container:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+
+
+
 
 /* === BOTTOM STYLES === */
 .bottom-player {
@@ -129,6 +181,10 @@ ion-content {
 .player-right .vol-range .range-bar {
   background: #404040;
 }
+
+
+
+
 
 /* === HEADER STYLES === */
 .topbar {
