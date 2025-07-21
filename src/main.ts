@@ -4,7 +4,19 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 import { App } from './app/app';
 import { routes } from './app/app.routes';
 import { addIcons } from 'ionicons';
-import { home, homeOutline, searchOutline, micOutline, notificationsOutline, downloadOutline, chevronDownOutline } from 'ionicons/icons';
+import { home, 
+  homeOutline, 
+  searchOutline, 
+  micOutline, 
+  notificationsOutline, 
+  downloadOutline, 
+  chevronDownOutline, 
+  shuffle, 
+  playSkipBackOutline, 
+  playCircle, 
+  playSkipForwardOutline, 
+  repeat, 
+  volumeLow } from 'ionicons/icons';
 
 bootstrapApplication(App, {
   providers: [
@@ -21,5 +33,11 @@ addIcons({
   'mic-outline': micOutline,
   'notifications-outline': notificationsOutline,
   'download-outline': downloadOutline,
-  'chevron-down-outline': chevronDownOutline
+  'chevron-down-outline': chevronDownOutline,
+  'shuffle': shuffle,
+  'play-skip-back-outline': playSkipBackOutline,
+  'play-circle': playCircle,
+  'play-skip-forward-outline': playSkipForwardOutline,
+  'repeat': repeat,
+  'volume-low': volumeLow,
 });

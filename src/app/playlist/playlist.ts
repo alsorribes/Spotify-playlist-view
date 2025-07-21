@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonSearchbar, IonButton, IonIcon, IonButtons } from '@ionic/angular/standalone';
+import { 
+  IonHeader, IonToolbar, IonTitle, IonContent, 
+  IonFooter, IonButton, IonIcon, IonRange
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-playlist',
@@ -7,16 +10,10 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonSearchbar, I
   styleUrls: ['./playlist.css'],
   standalone: true,
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonFooter,
-    IonSearchbar,
-    IonButton,
-    IonIcon,
-    IonButtons
-]
+    IonHeader, IonToolbar, IonTitle,
+    IonContent, IonFooter, IonButton,
+    IonIcon, IonRange
+  ]
 })
 export class PlaylistComponent {
   constructor() {}

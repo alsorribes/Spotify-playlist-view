@@ -6,7 +6,7 @@
                 <ion-title class="logo">Spotify</ion-title>
             </div>
             
-            <!-- Navegación central -->
+            <!-- Navegació central -->
             <div class="nav-section">
                 <ion-button class="nav-btn home-btn" fill="clear">
                     <ion-icon name="home" slot="icon-only"></ion-icon>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             
-            <!-- Sección derecha -->
+            <!-- Secció dreta -->
             <div class="right-section">
                 <ion-button class="action-btn" fill="clear">
                     <ion-icon name="download-outline"></ion-icon>
@@ -41,13 +41,93 @@
 
 <ion-content>
     <div class="spotify-container">
-        <div class="sidebar"></div>
-        <div class="playlist-container"></div>
+        <div class="sidebar">
+            <p>Sidebar Item 1</p>
+            <p>Sidebar Item 2</p>
+            <p>Sidebar Item 3</p>
+            <p>Sidebar Item 4</p>
+            <p>Sidebar Item 5</p>
+            <p>Sidebar Item 6</p>
+            <p>Sidebar Item 7</p>
+            <p>Sidebar Item 8</p>
+            <p>Sidebar Item 9</p>
+            <p>Sidebar Item 10</p>
+            <p>Sidebar Item 11</p>
+            <p>Sidebar Item 12</p>
+            <p>Sidebar Item 13</p>
+            <p>Sidebar Item 14</p>
+            <p>Sidebar Item 15</p>
+            <p>Sidebar Item 16</p>
+            <p>Sidebar Item 17</p>
+            <p>Sidebar Item 18</p>
+            <p>Sidebar Item 19</p>
+            <p>Sidebar Item 20</p>
+        </div>
+        <div class="playlist-container">
+            <h2>Mi Playlist</h2>
+            <p>Canción 1</p>
+            <p>Canción 2</p>
+            <p>Canción 3</p>
+            <p>Canción 4</p>
+            <p>Canción 5</p>
+            <p>Canción 6</p>
+            <p>Canción 7</p>
+            <p>Canción 8</p>
+            <p>Canción 9</p>
+            <p>Canción 10</p>
+            <p>Canción 11</p>
+            <p>Canción 12</p>
+            <p>Canción 13</p>
+            <p>Canción 14</p>
+            <p>Canción 15</p>
+            <p>Canción 16</p>
+            <p>Canción 17</p>
+            <p>Canción 18</p>
+            <p>Canción 19</p>
+            <p>Canción 20</p>
+            <p>Canción 21</p>
+            <p>Canción 22</p>
+            <p>Canción 23</p>
+            <p>Canción 24</p>
+            <p>Canción 25</p>
+        </div>
     </div> 
 </ion-content>
 
 <ion-footer>
-    <ion-toolbar class="bottom-player">
+  <ion-toolbar class="bottom-player">
+    <!-- 1) Left: track info -->
+    <div class="player-section player-left">
+      <img src="assets/cover.jpg" alt="Cover" class="track-cover" />
+      <div class="track-info">
+        <div class="track-title">Mi Chain de Roque</div>
+        <div class="track-artist">Duki</div>
+      </div>
+    </div>
 
-    </ion-toolbar>
+    <!-- 2) Center: playback controls -->
+    <div class="player-section player-center">
+      <ion-button fill="clear" class="ctrl-btn">
+        <ion-icon name="shuffle" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="ctrl-btn">
+        <ion-icon name="play-skip-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="play-btn">
+        <ion-icon name="play-circle" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="ctrl-btn">
+        <ion-icon name="play-skip-forward-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="ctrl-btn">
+        <ion-icon name="repeat" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+
+    <!-- 3) Right: volume -->
+    <div class="player-section player-right">
+      <ion-icon name="volume-low" class="vol-icon"></ion-icon>
+      <ion-range min="0" max="100" step="1" value="50" class="vol-range"></ion-range>
+    </div>
+  </ion-toolbar>
 </ion-footer>
