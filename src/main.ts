@@ -10,13 +10,15 @@ import { home,
   micOutline, 
   notificationsOutline, 
   downloadOutline, 
-  chevronDownOutline, 
-  shuffle, 
+  chevronDownOutline,
   playSkipBackOutline, 
   playCircle, 
-  playSkipForwardOutline, 
-  repeat, 
-  volumeLow } from 'ionicons/icons';
+  playSkipForwardOutline,
+  textOutline, 
+  shuffleOutline,
+  repeatOutline,
+  volumeLowOutline, 
+  headsetOutline} from 'ionicons/icons';
 
 bootstrapApplication(App, {
   providers: [
@@ -34,10 +36,12 @@ addIcons({
   'notifications-outline': notificationsOutline,
   'download-outline': downloadOutline,
   'chevron-down-outline': chevronDownOutline,
-  'shuffle': shuffle,
+  'shuffle-outline': shuffleOutline,
   'play-skip-back-outline': playSkipBackOutline,
   'play-circle': playCircle,
   'play-skip-forward-outline': playSkipForwardOutline,
-  'repeat': repeat,
-  'volume-low': volumeLow,
+  'repeat-outline': repeatOutline,
+  'volume-low-outline': volumeLowOutline,
+  'text-outline': textOutline,
+  'headset-outline': headsetOutline
 });
