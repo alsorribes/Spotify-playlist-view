@@ -18,7 +18,8 @@ import { home,
   shuffleOutline,
   repeatOutline,
   volumeLowOutline, 
-  headsetOutline} from 'ionicons/icons';
+  headsetOutline,
+  addOutline} from 'ionicons/icons';
 
 bootstrapApplication(App, {
   providers: [
@@ -43,5 +44,6 @@ addIcons({
   'repeat-outline': repeatOutline,
   'volume-low-outline': volumeLowOutline,
   'text-outline': textOutline,
-  'headset-outline': headsetOutline
+  'headset-outline': headsetOutline,
+  'add-outline': addOutline
 });
