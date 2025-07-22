@@ -353,13 +353,12 @@ ion-content {
   justify-content: space-between;
   width: 100%;
   height: 64px;
-  padding: 0 16px;
 }
 
 /* Logo Section */
 .logo-section {
   flex: 0 0 auto;
-  margin-left: 8px;
+  margin-left: 3px;
 }
 
 .logo {
@@ -374,10 +373,10 @@ ion-content {
 .nav-section {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   flex: 1;
   justify-content: flex-start;
-  margin-left: 26px;
+  margin-left: 30px;
 }
 
 .nav-btn {
@@ -415,7 +414,7 @@ ion-content {
   padding: 0 12px;
   height: 40px;
   width: 332px;
-  margin-left: 16px;
+  margin-left: 5px;
 }
 
 .search-container:hover {
@@ -464,6 +463,7 @@ ion-content {
   align-items: center;
   gap: 8px;
   flex: 0 0 auto;
+  margin-right: 10px;
 }
 
 .action-btn {
@@ -489,8 +489,8 @@ ion-content {
   --color: #b3b3b3;
   --background: transparent;
   --border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   --padding-start: 0;
   --padding-end: 0;
   margin: 0;
