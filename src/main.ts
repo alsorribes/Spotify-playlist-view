@@ -19,7 +19,11 @@ import { home,
   repeatOutline,
   volumeLowOutline, 
   headsetOutline,
-  addOutline} from 'ionicons/icons';
+  addOutline,
+  ellipsisHorizontal,
+  caretForwardOutline,
+  listOutline,
+  arrowDownCircleOutline} from 'ionicons/icons';
 
 bootstrapApplication(App, {
   providers: [
@@ -45,5 +49,9 @@ addIcons({
   'volume-low-outline': volumeLowOutline,
   'text-outline': textOutline,
   'headset-outline': headsetOutline,
-  'add-outline': addOutline
+  'add-outline': addOutline,
+  'ellipsis-horizontal': ellipsisHorizontal,
+  'caret-forward-outline': caretForwardOutline,
+  'list-outline': listOutline,
+  'arrow-down-circle-outline': arrowDownCircleOutline
 });

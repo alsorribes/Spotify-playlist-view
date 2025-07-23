@@ -25,6 +25,12 @@ ion-content {
   overflow: hidden;
 }
 
+
+
+
+
+
+/* === PLAYLIST STYLES === */
 .playlist-container {
   flex: 1;
   background-color: #181818;
@@ -36,6 +42,120 @@ ion-content {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.playlist-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+.playlist-cover-large {
+  width: 180px;
+  height: 180px;
+  border-radius: 7px;
+  box-shadow: 0 4px 60px rgba(0,0,0,0.5);
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+.playlist-info h3 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.playlist-info h1 {
+  font-size: 85px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.playlist-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.playlist-meta .owner {
+  color: #fff;
+  font-weight: 700;
+}
+
+.playlist-meta .dot {
+  width: 4px;
+  height: 4px;
+  background: #b3b3b3;
+  border-radius: 50%;
+}
+
+.playlist-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 24px;
+  padding: 0 0 16px 0;
+}
+
+.play-button {
+  --background: #1ed760;
+  --border-radius: 50%;
+  width: 75px;
+  height: 56px;
+  --padding-start: 0;
+  --padding-end: 0;
+  margin: 0;
+  --color: #000;
+}
+
+.play-button:hover {
+  --background: #1fdf64;
+  transform: scale(1.04);
+}
+
+.control-btn {
+  --color: #b3b3b3;
+  --background: transparent;
+  font-size: 23px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+.control-btn:hover {
+  --color: #fff;
+}
+
+.list-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.list-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 17px;
+  color: #fff;
+}
+
+.list-btn {
+  --color: #b3b3b3;
+  --background: transparent;
+  font-size: 15px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+.list-btn:hover {
+  --color: #fff;
+}
+
 
 
 

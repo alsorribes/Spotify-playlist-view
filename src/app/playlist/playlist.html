@@ -41,6 +41,7 @@
 
 <ion-content>
     <div class="spotify-container">
+
         <div class="sidebar">
           <div class="sidebar-header">
             <ion-button class="create-playlist-btn">
@@ -90,34 +91,40 @@
             </ion-button>
           </div>    
         </div>
+
         <div class="playlist-container">
-            <h2>Mi Playlist</h2>
-            <p>Canción 1</p>
-            <p>Canción 2</p>
-            <p>Canción 3</p>
-            <p>Canción 4</p>
-            <p>Canción 5</p>
-            <p>Canción 6</p>
-            <p>Canción 7</p>
-            <p>Canción 8</p>
-            <p>Canción 9</p>
-            <p>Canción 10</p>
-            <p>Canción 11</p>
-            <p>Canción 12</p>
-            <p>Canción 13</p>
-            <p>Canción 14</p>
-            <p>Canción 15</p>
-            <p>Canción 16</p>
-            <p>Canción 17</p>
-            <p>Canción 18</p>
-            <p>Canción 19</p>
-            <p>Canción 20</p>
-            <p>Canción 21</p>
-            <p>Canción 22</p>
-            <p>Canción 23</p>
-            <p>Canción 24</p>
-            <p>Canción 25</p>
+          <div class="playlist-header">
+            <img src="assets/megusta.png" alt="Tus me gusta" class="playlist-cover-large" />
+            <div class="playlist-info">
+              <h3>Playlist</h3>
+              <h1>Tus me gusta</h1>
+              <div class="playlist-meta">
+                <span class="owner">alsorribes</span>
+                <div class="dot"></div>
+                <span>2.696 canciones</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-controls">
+            <ion-button class="play-button">
+              <ion-icon name="caret-forward-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" class="control-btn">
+              <ion-icon name="shuffle-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" class="control-btn">
+              <ion-icon name="arrow-down-circle-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+            <div class="list-container">
+              <p class="list-text">Lista</p>
+              <ion-button fill="clear" class="list-btn">
+                <ion-icon name="list-outline" slot="icon-only"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
         </div>
+
     </div> 
 </ion-content>
 
