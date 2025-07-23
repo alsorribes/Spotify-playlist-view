@@ -48,19 +48,27 @@ ion-content {
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-top: 70px;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #181818;
+  padding: 10px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
 }
 
 .create-playlist-btn {
-  position: absolute;
-  top: 10px;
-  left: 19px;
   --color: rgb(147, 147, 147);
   --color-hover: #ffffff;
-  --background:#2e2e2e;
+  --background: #2e2e2e;
   --border-radius: 50%;
   border: none;
   width: 50px;
@@ -70,60 +78,113 @@ ion-content {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
-  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.create-playlist-btn:hover {
+  --color: #ffffff;
+  --background: #3e3e3e;
+  transform: scale(1.05);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Aumentado el gap entre elementos */
+  scrollbar-gutter: stable;
+  margin-left: 10px;
+}
+
+/* Botones de playlist */
+.playlist-item {
+  --background: transparent;
+  --border-width: 0;
+  --box-shadow: none;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.playlist-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.playlist-item:active {
+  transform: scale(0.95);
 }
 
 .playlist-cover {
-  width: 100%;
-  height: auto;
+  width: 70px;
+  height: 70px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  object-fit: cover;
+  pointer-events: none;
 }
 
-/* 1) TRACK siempre transparente en WebKit */
-.sidebar::-webkit-scrollbar-track,
-.playlist-container::-webkit-scrollbar-track {
-  background: transparent;
+/* Efecto overlay en hover */
+.playlist-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s ease;
+  border-radius: 10px;
 }
-.sidebar::-webkit-scrollbar-corner,
-.playlist-container::-webkit-scrollbar-corner {
+
+.playlist-item:hover::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de scrollbar específicos para sidebar-content */
+.sidebar-content::-webkit-scrollbar {
+  width: 6px; /* Siempre mantiene el ancho */
+}
+
+.sidebar-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* 2) THUMB transparente hasta el hover */
-.sidebar::-webkit-scrollbar-thumb,
-.playlist-container::-webkit-scrollbar-thumb {
+.sidebar-content::-webkit-scrollbar-corner {
   background: transparent;
 }
 
-/* 3) Al hover reaparece sólo el thumb */
-.sidebar:hover::-webkit-scrollbar-thumb,
-.playlist-container:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,0.3);
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: transparent;
   border-radius: 3px;
+  transition: background-color 0.2s ease;
 }
 
-/* 4) Ancho cero por defecto, 6px al hover */
-.sidebar::-webkit-scrollbar,
-.playlist-container::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-.sidebar:hover::-webkit-scrollbar,
-.playlist-container:hover::-webkit-scrollbar {
-  width: 6px;
-  height: auto;
+.sidebar-content:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
 }
 
-/* 5) Firefox: scrollbar-color para track y thumb */
-.sidebar,
-.playlist-container {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.sidebar-content {
+  scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
-.sidebar:hover,
-.playlist-container:hover {
+
+.sidebar-content:hover {
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.3) transparent;
 }
