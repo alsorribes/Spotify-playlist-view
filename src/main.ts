@@ -23,7 +23,9 @@ import { home,
   ellipsisHorizontal,
   caretForwardOutline,
   listOutline,
-  arrowDownCircleOutline} from 'ionicons/icons';
+  arrowDownCircleOutline,
+  timeOutline,
+  play} from 'ionicons/icons';
 
 bootstrapApplication(App, {
   providers: [
@@ -53,5 +55,7 @@ addIcons({
   'ellipsis-horizontal': ellipsisHorizontal,
   'caret-forward-outline': caretForwardOutline,
   'list-outline': listOutline,
-  'arrow-down-circle-outline': arrowDownCircleOutline
+  'arrow-down-circle-outline': arrowDownCircleOutline,
+  'time-outline': timeOutline,
+  'play': play
 });
